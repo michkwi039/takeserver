@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SwimmingCompetiton">
+    <output-path>$PROJECT_DIR$/classes/artifacts/SwimmingCompetiton</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="take" />
+          <element id="jpa-descriptors" facet="take/jpa/JPA" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="jaxrs-api-2.1.0.GA.jar" module-name="take" />
+          <element id="library" level="module" name="jboss-annotations-api_1.1_spec-1.0.0.Final.jar" module-name="take" />
+          <element id="library" level="module" name="hibernate-jpa-2.0-api-1.0.1.Final.jar" module-name="take" />
+          <element id="library" level="project" name="Hibernate 5.4.4-5.4.4" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="take/web/Web" />
+    </root>
+  </artifact>
+</component>
