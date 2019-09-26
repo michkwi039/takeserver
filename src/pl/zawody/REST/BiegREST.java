@@ -28,7 +28,7 @@ public class BiegREST {
 
     @GET
     @Path("/{idc}")
-    public Biegi findByID(@PathParam("idc") Long idc) {
+    public Biegi findByID(@PathParam("idc") int idc) {
         return bean.find(idc);
 
     }
@@ -48,7 +48,7 @@ public class BiegREST {
 
     @DELETE
     @Path("/{idc}")
-    public String delete(@PathParam("idc")Long idc) {
+    public String delete(@PathParam("idc")int idc) {
         Biegi biegi = bean.find(idc);
         if (biegi != null ) {
             return bean.delete(biegi);

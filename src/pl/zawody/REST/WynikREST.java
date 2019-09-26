@@ -25,7 +25,7 @@ public class WynikREST {
 
     @GET
     @Path("/{idc}")
-    public Wyniki findbyID(@PathParam("idc") Long idc) {
+    public Wyniki findbyID(@PathParam("idc") int idc) {
        return bean.find(idc);
     }
     @GET
@@ -41,7 +41,7 @@ public class WynikREST {
 
     @DELETE
     @Path("/{idc}")
-    public String delete(@PathParam("idc") Long idc) {
+    public String delete(@PathParam("idc") int idc) {
         Wyniki wyniki = bean.find(idc);
         if (wyniki != null ) {
             return bean.delete(wyniki);

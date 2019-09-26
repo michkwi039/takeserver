@@ -42,7 +42,7 @@ public class BiegEJB {
         }
     }
 
-    public Biegi find(Long id) {
+    public Biegi find(int id) {
         return entityManager.find(Biegi.class, id);
     }
 

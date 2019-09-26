@@ -44,7 +44,7 @@ public class ZawodnicyEJB {
         }
     }
 
-    public Zawodnicy find(Long id) {
+    public Zawodnicy find(int id) {
         return entityManager.find(Zawodnicy.class, id);
     }
 

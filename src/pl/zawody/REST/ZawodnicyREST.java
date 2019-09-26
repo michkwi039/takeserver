@@ -29,7 +29,7 @@ public class ZawodnicyREST  {
 
     @GET
     @Path("/{idc}")
-    public Zawodnicy findByID(@PathParam("idc") Long idc) {
+    public Zawodnicy findByID(@PathParam("idc") int idc) {
         return bean.find(idc);
     }
 
@@ -53,7 +53,7 @@ public class ZawodnicyREST  {
 
     @DELETE
     @Path("/{idc}")
-    public String delete(@PathParam("idc")Long idc) {
+    public String delete(@PathParam("idc")int idc) {
         Zawodnicy zawodnicy = bean.find(idc);
         if (zawodnicy != null ) {
             return bean.delete(zawodnicy);

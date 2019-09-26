@@ -1,10 +1,13 @@
 package pl.zawody.Entities;
 
+import pl.zawody.Utility.DateAdapter;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.Serializable;
 import java.sql.Date;
 import java.util.Collection;
@@ -16,6 +19,7 @@ import java.util.Objects;
 public class Zawody implements Serializable {
     private Integer idZawody;
     private Integer iloscBiegow;
+    @XmlJavaTypeAdapter(DateAdapter.class)
     private Date data;
     @XmlTransient
     private Collection<Biegi> biegisByIdZawody;

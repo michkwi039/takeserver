@@ -1,9 +1,12 @@
 package pl.zawody.Entities;
 
+import pl.zawody.Utility.TimeAdapter;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.Serializable;
 import java.sql.Time;
 import java.util.Objects;
@@ -14,6 +17,7 @@ import java.util.Objects;
 public class Wyniki implements Serializable {
     private Integer idWyniki;
     private Integer idZwyciezcy;
+    @XmlJavaTypeAdapter(TimeAdapter.class)
     private Time czas;
     private Integer biegiIdBiegu;
     private Integer zawodnicyIdZawodnika;

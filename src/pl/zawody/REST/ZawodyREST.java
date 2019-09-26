@@ -11,8 +11,8 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/zawody")
-@Consumes({ "application/xml" })
-@Produces({ "application/xml" })
+@Consumes(MediaType.APPLICATION_XML)
+@Produces(MediaType.APPLICATION_XML)
 
 public class ZawodyREST {
 
@@ -27,7 +27,7 @@ public class ZawodyREST {
 
     @GET
     @Path("/{idc}")
-    public Zawody findByID(@PathParam("idc") Long idc) {
+    public Zawody findByID(@PathParam("idc") int idc) {
         return bean.find(idc);
 
     }
@@ -47,7 +47,7 @@ public class ZawodyREST {
 
     @DELETE
     @Path("/{idc}")
-    public String delete(@PathParam("idc")Long idc) {
+    public String delete(@PathParam("idc")int idc) {
         Zawody zawody = bean.find(idc);
         if (zawody != null ) {
             return bean.delete(zawody);

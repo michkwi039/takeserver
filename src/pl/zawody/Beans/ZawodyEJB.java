@@ -42,7 +42,7 @@ public class ZawodyEJB {
         }
     }
 
-    public Zawody find(Long id) {
+    public Zawody find(int id) {
         return entityManager.find(Zawody.class, id);
     }
 
